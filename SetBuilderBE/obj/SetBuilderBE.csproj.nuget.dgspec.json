@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilderBE\\SetBuilderBE.csproj": {}
+    "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilderBE\\SetBuilderBE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilderBE\\SetBuilderBE.csproj": {
+    "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilderBE\\SetBuilderBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilderBE\\SetBuilderBE.csproj",
+        "projectUniqueName": "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilderBE\\SetBuilderBE.csproj",
         "projectName": "SetBuilderBE",
-        "projectPath": "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilderBE\\SetBuilderBE.csproj",
+        "projectPath": "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilderBE\\SetBuilderBE.csproj",
         "packagesPath": "C:\\Users\\harikaran.malayaperu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilderBE\\obj\\",
+        "outputPath": "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilderBE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
