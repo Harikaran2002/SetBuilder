@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SetBuilder_BE.Models;
+using SetBuilder_BE.Model;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
@@ -39,6 +39,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 

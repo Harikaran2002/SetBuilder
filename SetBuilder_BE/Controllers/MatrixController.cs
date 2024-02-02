@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SetBuilder_BE.Models;
+using SetBuilder_BE.Model;
 
 namespace SetBuilderBE.Controllers
 {

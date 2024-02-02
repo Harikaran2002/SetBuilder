@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SetBuilder_BE.Models
+namespace SetBuilder_BE.Model
 {
     public partial class VwMkpProduct
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace SetBuilder_BE.Models
+namespace SetBuilder_BE.Model
 {
     public partial class DWContext : DbContext
     {
@@ -17,6 +17,7 @@ namespace SetBuilder_BE.Models
         }
 
         public virtual DbSet<ClxTransaction> ClxTransactions { get; set; } = null!;
+        public virtual DbSet<DimMaterial> DimMaterials { get; set; } = null!;
         public virtual DbSet<GfProduct> GfProducts { get; set; } = null!;
         public virtual DbSet<ProductMaster> ProductMasters { get; set; } = null!;
         public virtual DbSet<ProductSetMaster> ProductSetMasters { get; set; } = null!;
@@ -108,6 +109,89 @@ namespace SetBuilder_BE.Models
                 entity.Property(e => e.Upc)
                     .HasMaxLength(500)
                     .HasColumnName("upc");
+            });
+
+            modelBuilder.Entity<DimMaterial>(entity =>
+            {
+                entity.ToTable("DIM_Material");
+
+                entity.Property(e => e.DimMaterialId).HasColumnName("DimMaterialID");
+
+                entity.Property(e => e.CaliberGuage)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Caliber Guage");
+
+                entity.Property(e => e.CustomerPresentations)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Customer Presentations");
+
+                entity.Property(e => e.DistributorInventory)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Distributor Inventory");
+
+                entity.Property(e => e.Material)
+                    .HasMaxLength(18)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.MaterialDescription)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Material Description");
+
+                entity.Property(e => e.OrderOMeter)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Order O Meter");
+
+                entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
+
+                entity.Property(e => e.ProductHierarchy)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Product Hierarchy");
+
+                entity.Property(e => e.ProductHierarchyDescriptionL1)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Product Hierarchy Description L1");
+
+                entity.Property(e => e.ProductHierarchyDescriptionL2)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Product Hierarchy Description L2");
+
+                entity.Property(e => e.ProductHierarchyDescriptionL3)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Product Hierarchy Description L3");
+
+                entity.Property(e => e.ProductHierarchyL1)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Product Hierarchy L1");
+
+                entity.Property(e => e.ProductHierarchyL2)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Product Hierarchy L2");
+
+                entity.Property(e => e.ProductHierarchyL3)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Product Hierarchy L3");
+
+                entity.Property(e => e.QuarterlyReview)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Quarterly Review");
+
+                entity.Property(e => e.Upc)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("UPC");
             });
 
             modelBuilder.Entity<GfProduct>(entity =>

@@ -1,4 +1,4 @@
-﻿namespace SetBuilder_BE.Models
+﻿namespace SetBuilder_BE.Model
 {
     public class SetHierarchy
     {

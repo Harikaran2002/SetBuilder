@@ -2233,11 +2233,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilder_BE\\SetBuilder_BE.csproj",
+      "projectUniqueName": "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilder_BE\\SetBuilder_BE.csproj",
       "projectName": "SetBuilder_BE",
-      "projectPath": "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilder_BE\\SetBuilder_BE.csproj",
+      "projectPath": "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilder_BE\\SetBuilder_BE.csproj",
       "packagesPath": "C:\\Users\\harikaran.malayaperu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\harikaran.malayaperu\\source\\repos\\SetBuilder_BE\\obj\\",
+      "outputPath": "C:\\Users\\harikaran.malayaperu\\SetBuilder\\SetBuilder_BE\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

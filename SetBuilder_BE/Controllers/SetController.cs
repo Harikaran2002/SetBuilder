@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SetBuilder_BE.Models;
+using SetBuilder_BE.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -119,6 +119,29 @@ namespace SetBuilder_BE.Controllers
             };
 
             return groupModel;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostProductSet([FromBody] ProductSetMaster productSet)
+        {
+            if (productSet == null)
+            {
+                return BadRequest("Invalid request data");
+            }
+
+            try
+            {
+                // Save the productSet to the database
+                _context.ProductSetMasters.Add(productSet);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction("GetProductSet", new { id = productSet.Sku }, productSet);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
     }

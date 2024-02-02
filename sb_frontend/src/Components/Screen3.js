@@ -12,27 +12,27 @@ export default function FileSystemNavigator() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://localhost:7144/api/Matrix/DistinctDepartments');
+        const response = await axios.get('https://localhost:7119/api/Matrix/DistinctDepartments');
         const departments = response.data;
 
         const tree = await Promise.all(
           departments.map(async (department) => {
-            const categoriesResponse = await axios.get(`https://localhost:7144/api/Matrix/SelectedCategory?department=${department}`);
+            const categoriesResponse = await axios.get(`https://localhost:7119/api/Matrix/SelectedCategory?department=${department}`);
             const categories = categoriesResponse.data;
 
             const categoryNodes = await Promise.all(
               categories.map(async (category) => {
-                const manufacturersResponse = await axios.get(`https://localhost:7144/api/Matrix/SelectedManufacturer?department=${department}&category=${category}`);
+                const manufacturersResponse = await axios.get(`https://localhost:7119/api/Matrix/SelectedManufacturer?department=${department}&category=${category}`);
                 const manufacturers = manufacturersResponse.data;
 
                 const manufacturerNodes = await Promise.all(
                   manufacturers.map(async (manufacturer) => {
-                    const calibersResponse = await axios.get(`https://localhost:7144/api/Matrix/SelectedCaliber?department=${department}&category=${category}&manufacturer=${manufacturer}`);
+                    const calibersResponse = await axios.get(`https://localhost:7119/api/Matrix/SelectedCaliber?department=${department}&category=${category}&manufacturer=${manufacturer}`);
                     const calibers = calibersResponse.data;
 
                     const caliberNodes = await Promise.all(
                       calibers.map(async (caliber) => {
-                        const upcsResponse = await axios.get(`https://localhost:7144/api/Matrix/SelectedUpc?department=${department}&category=${category}&manufacturer=${manufacturer}&caliber=${caliber}`);
+                        const upcsResponse = await axios.get(`https://localhost:7119/api/Matrix/SelectedUpc?department=${department}&category=${category}&manufacturer=${manufacturer}&caliber=${caliber}`);
                         const upcs = upcsResponse.data;
 
                         return {

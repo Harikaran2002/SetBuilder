@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SetBuilder_BE.Models
+namespace SetBuilder_BE.Model
 {
     public partial class ProductSetMaster
     {
@@ -14,5 +14,4 @@ namespace SetBuilder_BE.Models
         public string? Sku { get; set; }
         public int? IsActive { get; set; }
     }
-
 }
